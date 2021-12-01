@@ -1,21 +1,15 @@
-
 {% extends "base.html" %}
 {% block body %}
 {% load static %}
 
 	<link rel="stylesheet" href="{% static 'css/forms.css' %}">
 	{% if user.is_authenticated %}
-	<div id="sender">
-		<h3 >Sender:</h3>
-		<h4 id="email-sender">{{ request.user.email }}</h4>
-	</div>
 		<div class="mb-3">
 			<form method="POST" enctype="multipart/form-data" action='.'>
 				{% csrf_token %}
 				{{form.as_p}}
-				<button id="send">Send Mail</button>
+				<button id="send">Sign Up</button>
 			</form>
-
     <script>
     </script>
     

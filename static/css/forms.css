@@ -1,0 +1,70 @@
+:root
+{
+	--form-input-col: black;
+	--form-input-back: #2b99ff; 
+	--form-gradient: inset -12px -12px 22px rgba(255, 250, 250, 0.25), inset 10px 10px 22px rgba(10, 249, 249, 0.72);
+}
+
+#sender{
+    position:absolute;
+    left: 20%;
+    top: 100px;    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 29px;
+    
+    color: black;
+}
+#email-sender
+{
+    color:#494561;
+    font-weight:800;
+    padding-bottom:20%;
+}
+.mb-3{
+	top:35%;
+	position:absolute;
+	font-size: 30px;
+	width:55%;
+	left:20%;
+}
+.mb-3 > form > p > input,
+.mb-3 > form > p > textarea,
+.mb-3 > form > p > input:focus,
+.mb-3 > form > p > textarea:focus,
+.form-control,
+.form-control:focus
+{
+	font-weight:800;
+	background-color: #2b99ff;
+	background: var(--form-input-back);
+	box-shadow: var(--form-gradient);
+	border-radius: 25px;
+}
+#id_subject, #id_subject:focus, #id_subject:hover
+{
+	color:black;
+	font-weight: 900;
+	font-size:110%;
+}
+#send, #send:focus, #send:hover
+{
+	position: absolute;
+	width: 178px;
+	height: 70px;
+
+	background: #2b99ff;
+	box-shadow: inset -12px -12px 22px rgba(255, 250, 250, 0.25), inset 10px 10px 20px rgba(189, 131, 131, 0.72);
+	border-radius: 25px;
+	outline:none;
+	box-shadow: none;
+}
+#send:hover
+{
+	background-color:black;
+	color:white;
+	transition:0.5s;
+}
+
+
