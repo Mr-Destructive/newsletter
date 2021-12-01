@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+{% block body %}
+{% load static %}
+
+	<link rel="stylesheet" href="{% static 'css/mail/style.css' %}">
+	{% if user.is_authenticated %}
+	<div id="sender">
+		<h3 >Sender:</h3>
+		<h4 id="email-sender">{{ request.user.email }}</h4>
+	</div>
+		<div class="mb-3">
+			<form method="POST" enctype="multipart/form-data" action='.'>
+				{% csrf_token %}
+				{{form.as_p}}
+			</form>
+
+    <script>
+    </script>
+    
+			</div>
+	{% else %}
+		<h3>Please<a href="{% url 'login' %}">Login</a> or <a href="{% url 'register' %}">Register</a></h3>
+	{% endif %}
+{% endblock body %}

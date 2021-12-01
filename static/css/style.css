@@ -1,0 +1,20 @@
+body
+{
+	padding: 0;
+	margin: 0;
+	background-color:#CCCCFF;
+}
+
+h1{
+	text-align:center;
+	position:relative;
+}
+
+nav
+{
+	background-color:black;
+	color:#FFCCCC;
+	font-weight:900;
+}
+
+
