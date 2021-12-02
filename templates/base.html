@@ -57,12 +57,19 @@
     </main>
 
       {% block body %}
-      <h2>Newsletter App</h2>
+      <br />
+      <br />
+      <br />
+      <h2>Newsletter Feed</h2>
 
-        <!-- Here -->
+    <ul class="feed">
+        {% for article in articles %}
+        <li><a href="{{article.link}}">{{ article.title }}</a></li>
+        {% endfor %}
+    </ul>
+
 
 	  {% endblock %}
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

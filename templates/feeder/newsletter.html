@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block body %}
     <ul>
         {% for article in articles %}
         <li><a href="{{article.link}}">{{ article.title }}</a></li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

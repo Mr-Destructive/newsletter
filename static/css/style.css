@@ -17,4 +17,8 @@ nav
 	font-weight:900;
 }
 
-
+.feed >li >a{
+    color:black;
+    font-weight:700;
+    background-color:white;
+}

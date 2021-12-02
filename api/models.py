@@ -23,7 +23,6 @@ class Newsletter(models.Model):
 class Mail(models.Model):
     sender = models.EmailField(max_length = 255) 
     subject = models.CharField(max_length = 78)
-    body = models.CharField(max_length = 40000)
     recipients_list = ArrayField(models.EmailField(max_length = 255))
 
     def get_absolute_url(self):  

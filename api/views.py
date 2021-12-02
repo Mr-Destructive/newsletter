@@ -40,7 +40,6 @@ class AddEMailView(LoginRequiredMixin, CreateView):
         reciever_email = list(Newsletter.objects.values_list('email', flat=True))
         reciever_email += form.instance.recipients_list
         password = self.request.user.gapps_key
-        body = form.instance.body
         subject = form.instance.subject
 
         message = MIMEMultipart()
@@ -51,7 +50,7 @@ class AddEMailView(LoginRequiredMixin, CreateView):
         html_template='newsletter.html'
         context = {'articles': Article.objects.filter().order_by("-pub_date")[:12]}
         msg_html = render_to_string(html_template, context)
-        message.attach(MIMEText(msg_html, "plain"))
+        message.attach(MIMEText(msg_html, "html"))
         #message.attach_alternative(html_content, "text/html")
         message=message.as_string()
 
