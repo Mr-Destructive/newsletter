@@ -28,8 +28,27 @@ def devto():
     _feed = feedparser.parse("https://dev.to/feed/")
     save_new_article(_feed)
 
+def tech_republic():
+    _feed = feedparser.parse("https://www.techrepublic.com/rssfeeds/articles/")
+    save_new_article(_feed)
+
+def freecodecamp():
+    _feed = feedparser.parse("https://medium.com/feed/free-code-camp")
+    save_new_article(_feed)
+
+def medium():
+    _feed = feedparser.parse("https://medium.com/feed/better-programming")
+    save_new_article(_feed)
+
+def hackernoon():
+    _feed = feedparser.parse("https://cdn.hackernoon.com/feed")
+    save_new_article(_feed)
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
         geeksforgeeks()
         devto()
+        tech_republic()
+        freecodecamp()
+        medium()
+        hackernoon()

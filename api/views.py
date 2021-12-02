@@ -47,7 +47,7 @@ class AddEMailView(LoginRequiredMixin, CreateView):
         message["To"] = ', '.join(reciever_email)
         message["Subject"] = subject
 
-        html_template='newsletter.html'
+        html_template='feeder/newsletter.html'
         context = {'articles': Article.objects.filter().order_by("-pub_date")[:12]}
         msg_html = render_to_string(html_template, context)
         message.attach(MIMEText(msg_html, "html"))
