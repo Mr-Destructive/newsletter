@@ -1,5 +1,5 @@
 asgiref==3.4.1
-Django==3.2.9
+Django==3.2.13
 django-crispy-forms==1.13.0
 feedparser==6.0.8
 gunicorn==20.1.0
